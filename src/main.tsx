@@ -31,6 +31,22 @@ const skills=[['Programming','Python · Dart · Java · C/C++ · SQL · HTML/CSS
 const links={Email:'mailto:syarifahnajmah02@gmail.com',WhatsApp:'https://wa.me/6282235295245',LinkedIn:'https://www.linkedin.com/in/syarifah-najmah',GitHub:'https://github.com/syarfhh'};
 const nav=[['about','Profil','About'],['skills','Keahlian','Skills'],['projects','Proyek','Projects'],['experience','Pengalaman','Experience'], ['publications', 'Publikasi', 'Publications'], ['awards','Prestasi','Awards'],['contact','Kontak','Contact']];
 const pic=(name:string)=>'./assets/'+name;
+function FrameButterfly({className}:{className:string}){
+ return <svg className={`frame-butterfly ${className}`} viewBox="0 0 64 64" aria-hidden="true">
+  <g className="butterfly-wings">
+   <path d="M30 31C23 23 14 7 7 10C-1 13 5 30 28 35Z"/>
+   <path d="M29 36C20 32 11 35 13 44C15 53 24 52 31 39Z"/>
+  </g>
+  <g className="butterfly-wings" transform="translate(64 0) scale(-1 1)">
+   <path d="M30 31C23 23 14 7 7 10C-1 13 5 30 28 35Z"/>
+   <path d="M29 36C20 32 11 35 13 44C15 53 24 52 31 39Z"/>
+  </g>
+  <path className="butterfly-body" d="M32 24C28 31 29 42 32 49C35 42 36 31 32 24Z"/>
+  <path className="butterfly-antennae" d="M31 27C27 20 23 18 20 19M33 27C37 20 41 18 44 19"/>
+  <circle className="butterfly-spot" cx="15" cy="21" r="2"/>
+  <circle className="butterfly-spot" cx="49" cy="21" r="2"/>
+ </svg>;
+}
 function Site(){
  const {en,t}=useLanguage();const [filter,F]=useState(0),[skill,S]=useState(-1),[org,O]=useState(false),[menu,M]=useState(false),[award,A]=useState(0),[name,N]=useState(''),[message,Q]=useState('');const modal=useRef<HTMLDialogElement>(null);
  useEffect(()=>{
@@ -102,7 +118,7 @@ function Site(){
  const medal=[t('Medali perak · Pemrograman','Silver medal · Programming'),t('Medali perunggu · Pemrograman game','Bronze medal · Game programming')];
  const btn=(value:number,label:string,current:number,action:(v:number)=>void)=><button key={value} aria-pressed={current===value} onClick={()=>action(value)}>{label}</button>;
  return <><header><a className="mark" href="#top">SN<span>.</span></a><button className="menub" aria-expanded={menu} onClick={()=>M(!menu)}>Menu</button><nav className={menu?'open':''}>{nav.map(([id,i,e])=><a key={id} onClick={()=>M(false)} href={'#'+id}>{t(i,e)}</a>)}</nav><Switch/><a className="cv" download href={pic('cv.pdf')}>CV ↓</a></header>
- <main id="top"><div className="page-butterflies" aria-hidden="true">{Array.from({length:9},(_,i)=><span className="butterfly" key={i}><i/></span>)}</div><section className="hero reveal"><motion.div initial={{y:10}} animate={{y:0}}><p className="eyebrow">{title}</p><h1>Syarifah<br/><em>Najmah.</em></h1><h3>{t('Fokus karier','Career interests')} · Data Analyst / System Analyst / Quality Assurance</h3><p>{t('Saya mengolah data menjadi insight yang bermakna dan menerjemahkan kebutuhan pengguna menjadi solusi sistem yang terstruktur. Saya memiliki pengalaman dalam visualisasi data, pengembangan aplikasi, serta dokumentasi dan pengujian sistem.','I transform data into meaningful insights and translate user needs into structured system solutions. I have experience in data visualization, application development, and system documentation and testing.')}</p><div className="actions"><a className="primary" href="#projects">{t('Lihat proyek','View projects')} ↗</a><a href="#contact">{t('Hubungi saya','Contact me')} →</a></div><p className="social">{['LinkedIn','GitHub'].map(k=><a key={k} href={links[k]}>{k} ↗ </a>)}</p></motion.div><figure><div className="sparkles" aria-hidden="true">{Array.from({length:14},(_,i)=><span key={i}/>)}</div><span className="frame-butterfly" aria-hidden="true"><i/></span><img src={pic('sari.webp')} alt="Syarifah Najmah"/><figcaption>Dompu / Yogyakarta, Indonesia</figcaption></figure></section>
+ <main id="top"><div className="page-butterflies" aria-hidden="true">{Array.from({length:9},(_,i)=><span className="butterfly" key={i}><i/></span>)}</div><section className="hero reveal"><motion.div initial={{y:10}} animate={{y:0}}><p className="eyebrow">{title}</p><h1>Syarifah<br/><em>Najmah.</em></h1><h3>{t('Fokus karier','Career interests')} · Data Analyst / System Analyst / Quality Assurance</h3><p>{t('Saya mengolah data menjadi insight yang bermakna dan menerjemahkan kebutuhan pengguna menjadi solusi sistem yang terstruktur. Saya memiliki pengalaman dalam visualisasi data, pengembangan aplikasi, serta dokumentasi dan pengujian sistem.','I transform data into meaningful insights and translate user needs into structured system solutions. I have experience in data visualization, application development, and system documentation and testing.')}</p><div className="actions"><a className="primary" href="#projects">{t('Lihat proyek','View projects')} ↗</a><a href="#contact">{t('Hubungi saya','Contact me')} →</a></div><p className="social">{['LinkedIn','GitHub'].map(k=><a key={k} href={links[k]}>{k} ↗ </a>)}</p></motion.div><figure><div className="sparkles" aria-hidden="true">{Array.from({length:14},(_,i)=><span key={i}/>)}</div><div className="frame-butterflies" aria-hidden="true"><FrameButterfly className="frame-butterfly--top"/><FrameButterfly className="frame-butterfly--left"/><FrameButterfly className="frame-butterfly--right"/></div><img src={pic('sari.webp')} alt="Syarifah Najmah"/><figcaption>Dompu / Yogyakarta, Indonesia</figcaption></figure></section>
 
 <section id="about" className="reveal">
   <h2>{t('Tentang saya', 'About me')}</h2>
