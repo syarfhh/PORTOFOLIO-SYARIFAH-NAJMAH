@@ -52,23 +52,7 @@ function Site(){
  },[filter,skill,org]);
  const title=t('Portofolio Teknologi Informasi','Information Technology Portfolio');
  const publications: Publication[] = [
-  {
-    title:
-      'Analysis of Social Factors Influencing Drug Use Attempts Using Exploratory Data Analysis (EDA) and Linear Regression',
-    authors: 'Esi Putri Silmina, Syarifah Najmah',
-    journal: 'Journal of Information Technology (JIfoTech)',
-    year: '2025',
-    volume: 'Vol. 5, No. 1',
-    description: [
-      'Penelitian mengenai faktor sosial yang memengaruhi percobaan penggunaan narkoba melalui eksplorasi data dan pemodelan regresi linear. Hasil analisis divisualisasikan menggunakan Tableau.',
-      'Research on social factors influencing drug experimentation through exploratory data analysis and linear regression modeling. The findings are visualized using Tableau.'
-    ],
-    doi: '10.46229/jifotech.v5i1.967',
-    link: 'https://doi.org/10.46229/jifotech.v5i1.967',
-    methods: 'EDA · Linear Regression · Python · Tableau'
-  },
-
-  {
+    {
     title:
       'Implementation of Production Flow Based on Good Manufacturing Practices (GMP) to Improve Product Quality at UMKM Estu SAE',
     authors:
@@ -83,6 +67,21 @@ function Site(){
     doi: '10.31001/dimasbudi.v8i2.2536',
     link: 'https://doi.org/10.36085/bumir.v8i3.8657',
     methods: 'Good Manufacturing Practices · Production Flow · Quality Control'
+  },
+  {
+    title:
+      'Analysis of Social Factors Influencing Drug Use Attempts Using Exploratory Data Analysis (EDA) and Linear Regression',
+    authors: 'Esi Putri Silmina, Syarifah Najmah',
+    journal: 'Journal of Information Technology (JIfoTech)',
+    year: '2025',
+    volume: 'Vol. 5, No. 1',
+    description: [
+      'Penelitian mengenai faktor sosial yang memengaruhi percobaan penggunaan narkoba melalui eksplorasi data dan pemodelan regresi linear. Hasil analisis divisualisasikan menggunakan Tableau.',
+      'Research on social factors influencing drug experimentation through exploratory data analysis and linear regression modeling. The findings are visualized using Tableau.'
+    ],
+    doi: '10.46229/jifotech.v5i1.967',
+    link: 'https://doi.org/10.46229/jifotech.v5i1.967',
+    methods: 'EDA · Linear Regression · Python · Tableau'
   },
   {
     title:
