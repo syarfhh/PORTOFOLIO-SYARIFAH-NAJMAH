@@ -67,6 +67,23 @@ function Site(){
     link: 'https://doi.org/10.46229/jifotech.v5i1.967',
     methods: 'EDA · Linear Regression · Python · Tableau'
   },
+
+  {
+    title:
+      'Implementation of Production Flow Based on Good Manufacturing Practices (GMP) to Improve Product Quality at UMKM Estu SAE',
+    authors:
+      'Nosa Septiana Anindita, Arif Bimantara, Zahra Arwananing Tyas, Dimas Rizki Setyaji, Syarifah Najmah, Sindy Putri Yoseva, Nurrohmah Dwi Mahesti',
+    journal: 'Jurnal Dimas Budi',
+    year: '2024',
+    volume: 'Vol. 8, No. 2',
+    description: [
+      'Penelitian ini membahas penerapan alur produksi berbasis Good Manufacturing Practices (GMP) untuk meningkatkan kualitas produk UMKM Estu SAE melalui perancangan alur produksi, pelatihan, sanitasi, dan penerapan standar kebersihan.',
+      'This study discusses the implementation of a Good Manufacturing Practices (GMP)-based production flow to improve product quality at UMKM Estu SAE through production flow design, training, sanitation, and hygiene standard implementation.'
+    ],
+    doi: '10.31001/dimasbudi.v8i2.2536',
+    link: 'https://doi.org/10.36085/bumir.v8i3.8657',
+    methods: 'Good Manufacturing Practices · Production Flow · Quality Control'
+  },
   {
     title:
       'Analisis Forensik Jejak Aktivitas Pengguna pada Google Chrome Menggunakan Metode NIST',
